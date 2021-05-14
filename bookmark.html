@@ -17,8 +17,46 @@
   </head>
   <body>
     <h1>A simple Book library</h1>
-    <input id="search" type="text" class="text" />
-    <div class="container" id="showBooks"></div>
+    <div class="container ml-2">
+      <input
+        id="bookname"
+        class="form-control mt-5 mb-4"
+        type="text"
+        placeholder="Enter Book name"
+        aria-label="default input example"
+      />
+      <input
+        id="author"
+        class="form-control mb-2"
+        type="text"
+        placeholder="Enter Author's Name"
+        aria-label="default input example"
+      />
+      <button onclick="searchBooks()" class="btn btn-secondary">Search Books</button>
+      <button onclick="reset()" class="btn btn-secondary">Find New!</button>
+    </div>
+    <br><hr><br>
+    <center>
+        <h2>Search Result</h2>
+    </center>
+    <div class="container mt-4">
+        <table class="table" id="showBooks">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody id="showRes">
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+    </div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
